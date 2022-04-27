@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# package manager aliases for parity between different package managers
+# feel free to add more package managers via a pr
+# (currently these are the ones i use)
+if command -v apt &> /dev/null
+then
+    alias install='sudo apt install'
+    alias remove='sudo apt remove'
+    alias autoremove='sudo apt autoremove'
+    alias upgrade='sudo apt update && sudo apt upgrade && sudo apt autoremove'
+elif command -v pacman &> /dev/null
+then
+    alias install='sudo pacman -S'
+    alias remove='sudo pacman -Rsn'
+    alias autoremove='sudo pacman -Rsn $(pacman -Qdtq)'
+    alias upgrade='sudo pacman -Syu'
+fi
+
