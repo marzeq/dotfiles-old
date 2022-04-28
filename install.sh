@@ -37,7 +37,7 @@ do
 	if [ $package == "exit" ]; then
 		exit
 	elif [ $package == "sway" ] || [ $package == "desktop" ] || [ $package == "rice" ]; then
-		$INSTALLCOMMAND sway rofi xsettingsd xorg-xwayland alacritty neovim unzip
+		$INSTALLCOMMAND sway rofi xsettingsd xorg-xwayland alacritty neovim unzip wl-clipboard
 
 		wget -O CodeNewRoman.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/CodeNewRoman.zip"
 		unzip CodeNewRoman.zip -d ~/.fonts

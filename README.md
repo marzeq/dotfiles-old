@@ -25,4 +25,4 @@ Other programs that I might use:
 
 The installer works best on Arch Linux (any distro with the arch repos _should_ work), and might work on Debian-based systems (though I haven't tested it).
 
-### I am not responsible for any damage that may occur to your system. This is mostly for personal use.
+### I am not responsible for any damage that this might make to your system. This is mostly for personal use.
