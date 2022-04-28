@@ -12,6 +12,15 @@ set $right l
 # Terminal emulator
 set $term alacritty
 
+# Browser
+set $browser google-chrome-stable
+
+# Communicator
+set $communicator discord
+
+# File manager
+set $filemanager pcmanfm
+
 # Run launcher
 set $menu rofi -modes "window,drun" -show drun
 
@@ -46,6 +55,15 @@ input * xkb_layout "pl"
     # Start a terminal
     bindsym $mod+Return exec $term
 
+    # Start a web browser
+    bindsym $mod+b exec $browser
+
+    # Start the communicator app
+    bindsym $mod+c exec $communicator
+
+    # Start a file manager
+    bindsym $mod+f exec $filemanager
+
     # Kill focused window
     bindsym $mod+Shift+q kill
 
@@ -66,10 +84,10 @@ input * xkb_layout "pl"
     bindsym $mod+Shift+c reload
 
     # Power menu
-    bindsym $mod+Shift+p exec --no-startup-id /home/marzeq/.config/sway/powermenu.sh
+    bindsym $mod+Shift+p exec --no-startup-id ~/.config/sway/powermenu.sh
 
     # Set volume
-    bindsym $mod+Shift+v exec --no-startup-id /home/marzeq/.config/sway/volumemenu.sh
+    bindsym $mod+Shift+v exec --no-startup-id ~/.config/sway/volumemenu.sh
 
 # Movement
 
