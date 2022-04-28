@@ -65,14 +65,11 @@ input * xkb_layout "pl"
     # Reload the configuration file
     bindsym $mod+Shift+c reload
 
-    # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
-
     # Power menu
-    bindsym $mod+Shift+s exec --no-startup-id /home/marzeq/.config/sway/powermenu.sh
+    bindsym $mod+Shift+p exec --no-startup-id /home/marzeq/.config/sway/powermenu.sh
 
     # Set volume
-    bindsym $mod+c exec pamixer --set-volume $(echo "" | rofi -dmenu)
+    bindsym $mod+Shift+v exec --no-startup-id /home/marzeq/.config/sway/volumemenu.sh
 
 # Movement
 
