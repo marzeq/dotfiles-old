@@ -49,11 +49,13 @@ do
 		mkdir $HOME/.config/xsettingsd
 		mkdir $HOME/.config/alacritty
 		mkdir $HOME/.themes
+		mkdir $HOME/.icons
 
 		cp $currentdir/sway/* $HOME/.config/sway
 		cp $currentdir/rofi/* $HOME/.config/rofi
 		cp $currentdir/xsettingsd/* $HOME/.config/xsettingsd
 		cp $currentdir/themes/Adwaita-One-Dark $HOME/.themes
+		cp $currentdir/themes/Tela-blue-dark $HOME/.themes
 		cp $currentdir/alacritty/alacritty.yml $HOME/.config/alacritty/.alacritty.yml
 		cp $currentdir/bash/.bashrc $HOME/.bashrc
 		cp $currentdir/bash/.aliasrc $HOME/.aliasrc
