@@ -146,6 +146,9 @@ input * xkb_layout "pl"
     # Move focus to the parent container
     bindsym $mod+a focus parent
 
+    # Set volume
+    bindsym $mod+Tab exec --no-startup-id ~/.config/sway/supertab.sh
+
 # Resizing containers
 
 mode "resize" {
@@ -211,14 +214,13 @@ exec_always {
     gsettings set $gnome-schema gtk-theme "Adwaita-One-Dark"
 }
 
-exec export GTK_THEME="Adwaita-One-Dark"
 exec --no-startup-id xsettingsd
 
 ### Other
 
 # XDG Desktop Portals
 
-exec export XDG_CURRENT_DESKTOP=sway
+exec systemctl --user import-enviorment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
 
 include /etc/sway/config.d/*
