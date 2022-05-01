@@ -41,6 +41,7 @@ do
 		$INSTALL sway swaylock swayidle waybar light grim slurp pavucontrol rofi xsettingsd xorg-xwayland xdg-desktop-portal xdg-desktop-portal-wlr qt5-wayland qt5ct alacritty neovim unzip wl-clipboard pipewire pipewire-alsa pipewire-jack pipewire-pulse gst-plugin-pipewire libpulse wireplumber
 
 		wget -O CodeNewRoman.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/CodeNewRoman.zip"
+		mkdir ~/.fonts
 		unzip CodeNewRoman.zip -d ~/.fonts
 		fc-cache -fv
 		rm CodeNewRoman.zip
@@ -56,7 +57,7 @@ do
 		cp $currentdir/rofi/* $HOME/.config/rofi
 		cp $currentdir/xsettingsd/* $HOME/.config/xsettingsd
 		cp $currentdir/themes/Adwaita-One-Dark $HOME/.themes
-		cp $currentdir/themes/Tela-blue-dark $HOME/.themes
+		cp $currentdir/icons/Tela-blue-dark $HOME/.icons
 		cp $currentdir/alacritty/alacritty.yml $HOME/.config/alacritty/.alacritty.yml
 		cp $currentdir/bash/.bashrc $HOME/.bashrc
 		cp $currentdir/bash/.aliasrc $HOME/.aliasrc
@@ -72,13 +73,14 @@ do
 
 
 
-		!!!
-		It is best to reboot now!
-		!!!"
+!!!
+It is best to reboot now!
+!!!"
 	elif [ $package == "i3" ] || [ $package == "xorg" ]; then
 		$INSTALL i3-gaps xorg-server xorg-xinit light pavucontrol rofi xsettingsd alacritty neovim unzip xclip pipewire pipewire-alsa pipewire-jack pipewire-pulse gst-plugin-pipewire libpulse wireplumber
 
 		wget -O CodeNewRoman.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/CodeNewRoman.zip"
+		mkdir ~/.fonts
 		unzip CodeNewRoman.zip -d ~/.fonts
 		fc-cache -fv
 		rm CodeNewRoman.zip
@@ -94,11 +96,11 @@ do
 		cp $currentdir/rofi/* $HOME/.config/rofi
 		cp $currentdir/xsettingsd/* $HOME/.config/xsettingsd
 		cp $currentdir/themes/Adwaita-One-Dark $HOME/.themes
-		cp $currentdir/themes/Tela-blue-dark $HOME/.themes
+		cp $currentdir/icons/Tela-blue-dark $HOME/.icons
 		cp $currentdir/alacritty/alacritty.yml $HOME/.config/alacritty/.alacritty.yml
 		cp $currentdir/bash/.bashrc $HOME/.bashrc
 		cp $currentdir/bash/.aliasrc $HOME/.aliasrc
-		cp $currentdir/sway/.bash_profile $HOME/.bash_profile
+		cp $currentdir/i3/.bash_profile $HOME/.bash_profile
 
 		git clone https://github.com/kabinspace/AstroVim ~/.config/nvim
 		nvim +PackerSync
@@ -108,9 +110,9 @@ do
 
 
 
-		!!!
-		It is best to reboot now!
-		!!!"
+!!!
+It is best to reboot now!
+!!!"
 	elif [ $package == "yay" ]; then
 		pacman -S --needed git base-devel
 		git clone https://aur.archlinux.org/yay-bin.git
