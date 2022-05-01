@@ -25,7 +25,8 @@ mkdir -p $HOME/.bin
 while true
 do
 	echo "You can install:
-	sway/desktop/rice - my sway desktop w/ config, rofi, alacritty, neovim (astrovim), bash dotfiles, xsettingsd, codenewroman font and gtk theme
+	sway/wayland - my sway desktop w/ config, rofi, alacritty, neovim (astrovim), bash dotfiles, xsettingsd, codenewroman font and gtk theme
+	i3/xorg - my i3 desktop w/ config, rofi, alacritty, neovim (astrovim), bash dotfiles, xsettingsd, codenewroman font and gtk theme
 	yay - arch only
 	ghcli - automatically runs gh auth login
 	discord
@@ -36,8 +37,8 @@ do
 
 	if [ $package == "exit" ]; then
 		exit
-	elif [ $package == "sway" ] || [ $package == "desktop" ] || [ $package == "rice" ]; then
-		$INSTALLCOMMAND sway swaylock swayidle waybar light grim slurp pavucontrol foot rofi xsettingsd xorg-xwayland xdg-desktop-portal xdg-desktop-portal-wlr qt5-wayland qt5ct alacritty neovim unzip wl-clipboard pipewire pipewire-alsa pipewire-jack pipewire-pulse gst-plugin-pipewire libpulse wireplumber
+	elif [ $package == "sway" ] || [ $package == "wayland" ]; then
+		$INSTALLCOMMAND sway swaylock swayidle waybar light grim slurp pavucontrol rofi xsettingsd xorg-xwayland xdg-desktop-portal xdg-desktop-portal-wlr qt5-wayland qt5ct alacritty neovim unzip wl-clipboard pipewire pipewire-alsa pipewire-jack pipewire-pulse gst-plugin-pipewire libpulse wireplumber
 
 		wget -O CodeNewRoman.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/CodeNewRoman.zip"
 		unzip CodeNewRoman.zip -d ~/.fonts
@@ -62,6 +63,42 @@ do
 		cp $currentdir/sway/.bash_profile $HOME/.bash_profile
 
 		sudo systemctl enable pipewire-pulse
+
+		git clone https://github.com/kabinspace/AstroVim ~/.config/nvim
+		nvim +PackerSync
+
+		echo "
+
+
+
+
+		!!!
+		It is best to reboot now!
+		!!!"
+	elif [ $package == "i3" ] || [ $package == "xorg" ]; then
+		$INSTALLCOMMAND i3-gaps xorg-server xorg-xinit light pavucontrol rofi xsettingsd alacritty neovim unzip xclip pipewire pipewire-alsa pipewire-jack pipewire-pulse gst-plugin-pipewire libpulse wireplumber
+
+		wget -O CodeNewRoman.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/CodeNewRoman.zip"
+		unzip CodeNewRoman.zip -d ~/.fonts
+		fc-cache -fv
+		rm CodeNewRoman.zip
+
+		mkdir $HOME/.config/i3
+		mkdir $HOME/.config/rofi
+		mkdir $HOME/.config/xsettingsd
+		mkdir $HOME/.config/alacritty
+		mkdir $HOME/.themes
+		mkdir $HOME/.icons
+
+		cp $currentdir/i3/* $HOME/.config/i3
+		cp $currentdir/rofi/* $HOME/.config/rofi
+		cp $currentdir/xsettingsd/* $HOME/.config/xsettingsd
+		cp $currentdir/themes/Adwaita-One-Dark $HOME/.themes
+		cp $currentdir/themes/Tela-blue-dark $HOME/.themes
+		cp $currentdir/alacritty/alacritty.yml $HOME/.config/alacritty/.alacritty.yml
+		cp $currentdir/bash/.bashrc $HOME/.bashrc
+		cp $currentdir/bash/.aliasrc $HOME/.aliasrc
+		cp $currentdir/sway/.bash_profile $HOME/.bash_profile
 
 		git clone https://github.com/kabinspace/AstroVim ~/.config/nvim
 		nvim +PackerSync
