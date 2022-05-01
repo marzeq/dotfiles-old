@@ -19,3 +19,5 @@ fi
 
 alias vim="nvim"
 alias vi="nvim"
+
+alias dmenu="rofi -dmenu"
