@@ -38,7 +38,7 @@ do
 	if [ $package == "exit" ]; then
 		exit
 	elif [ $package == "sway" ] || [ $package == "wayland" ]; then
-		$INSTALLCOMMAND sway swaylock swayidle waybar light grim slurp pavucontrol rofi xsettingsd xorg-xwayland xdg-desktop-portal xdg-desktop-portal-wlr qt5-wayland qt5ct alacritty neovim unzip wl-clipboard pipewire pipewire-alsa pipewire-jack pipewire-pulse gst-plugin-pipewire libpulse wireplumber
+		$INSTALL sway swaylock swayidle waybar light grim slurp pavucontrol rofi xsettingsd xorg-xwayland xdg-desktop-portal xdg-desktop-portal-wlr qt5-wayland qt5ct alacritty neovim unzip wl-clipboard pipewire pipewire-alsa pipewire-jack pipewire-pulse gst-plugin-pipewire libpulse wireplumber
 
 		wget -O CodeNewRoman.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/CodeNewRoman.zip"
 		unzip CodeNewRoman.zip -d ~/.fonts
@@ -76,7 +76,7 @@ do
 		It is best to reboot now!
 		!!!"
 	elif [ $package == "i3" ] || [ $package == "xorg" ]; then
-		$INSTALLCOMMAND i3-gaps xorg-server xorg-xinit light pavucontrol rofi xsettingsd alacritty neovim unzip xclip pipewire pipewire-alsa pipewire-jack pipewire-pulse gst-plugin-pipewire libpulse wireplumber
+		$INSTALL i3-gaps xorg-server xorg-xinit light pavucontrol rofi xsettingsd alacritty neovim unzip xclip pipewire pipewire-alsa pipewire-jack pipewire-pulse gst-plugin-pipewire libpulse wireplumber
 
 		wget -O CodeNewRoman.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/CodeNewRoman.zip"
 		unzip CodeNewRoman.zip -d ~/.fonts
