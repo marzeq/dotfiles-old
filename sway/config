@@ -30,7 +30,10 @@ set $menu rofi -modes "window,drun" -show drun
 # Monitor config
 
 # Set wallpaper
-output * bg /home/marzeq/Pictures/wallpaper.png fill
+output * bg ~/wallpapers/wallpaper.png fill
+
+# Wallpaper switched
+bindsym $mod+Shift+w exec ~/wallpapers/switch.sh
 
 # Set default scaling
 output HDMI-A-1 scale 1.5
