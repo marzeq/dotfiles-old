@@ -1,0 +1,29 @@
+
+  
+{
+	"layer": "top",
+	"modules-left": ["sway/workspaces", "custom/spotify", "sway/mode"],
+	"modules-center": [],
+	"modules-right": ["pulseaudio", "clock", "tray"],
+	"custom/spotify": {
+		"exec": "/usr/bin/python3 ~/.config/waybar/mediaplayer.py --player spotify",
+        "format": "{} ",
+        "return-type": "json",
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous"
+	},
+	"pulseaudio": {
+		"tooltip": false,
+		"scroll-step": 5,
+		"format": "{icon} {volume}%",
+		"format-icons": {
+			"default": ["奄", "奔", "墳"]
+		},
+		"on-click": "~/.config/sway/volumemenu.sh"
+	},
+	"clock": {
+		"interval": 1,
+		"format": "{:%a %d %b %H:%M:%S}"
+	}
+}

@@ -1,0 +1,126 @@
+/*
+background: #282A36;
+black: #282C34;
+red: #E06C75;
+green: #98C379;
+yellow: #E5C07B;
+blue: #61AFEF;
+purple: #C678DD;
+cyan: #56B6C2;
+white: #ABB2BF;
+*/
+
+* {
+	border: none;
+	border-radius: 0;
+	font-family: "CodeNewRoman Nerd Font";
+	font-size: 14px;
+	min-height: 24px;
+}
+
+window#waybar {
+	background: transparent;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+#window {
+    margin-top: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+	border-radius: 26px;
+	transition: none;
+    color: transparent;
+	background: transparent;
+}
+
+#workspaces {
+	margin-top: 8px;
+	margin-left: 12px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	background: #282A36;
+	transition: none;
+}
+
+#workspaces button {
+	transition: none;
+	color: #ABB2BF;
+	background: transparent;
+	font-size: 16px;
+}
+
+#workspaces button.focused {
+	color: #61AFEF;
+}
+
+#workspaces button:hover {
+	transition: none;
+	box-shadow: inherit;
+	text-shadow: inherit;
+	color: #C678DD;
+}
+
+.custom-spotify {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	transition: none;
+    background-color: #99c379;
+    color: black;
+}
+
+#pulseaudio {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	transition: none;
+	color: #282C34;
+	background: #61Afef;
+}
+
+#clock {
+	margin-top: 8px;
+	margin-left: 8px;
+	margin-right: 12px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	transition: none;
+	color: #ABB2BF;
+	background: #282A36;
+}
+
+#mode {
+	margin-top: 8px;
+	margin-left: 8px;
+	margin-right: 12px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	transition: none;
+	color: #ABB2BF;
+	background: #E06C75;
+}
+
+#tray {
+	margin-top: 8px;
+	margin-right: 12px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 0;
+	border-radius: 26px;
+	transition: none;
+	color: #ABB2BF;
+	background: #C678DD;
+}

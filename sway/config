@@ -197,18 +197,7 @@ client.unfocused        #323232 #5f676a #ABB2BF #292d2e   #222222
 # Status bar
 
 bar {
-    position bottom
-
-    status_command ~/.config/sway/statusbar.sh
-
-    colors {
-        statusline #ABB2BF
-        background #16181c
-        inactive_workspace #323232 #323232 #5c5c5c
-        focused_workspace  #39658A #61AFEF #FFFFFF
-    }
-
-    gaps 10
+    swaybar_command waybar
 }
 
 # GTK Theme

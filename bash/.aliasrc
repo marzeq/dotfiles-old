@@ -20,3 +20,16 @@ fi
 alias vim="nvim"
 alias vi="nvim"
 
+function newtsproj() {
+    if [ -z $1 ]; then
+        echo "Directory name not supplied"
+        return
+    fi
+
+    git clone https://github.com/marzeq/typescript-template $1
+    cd $1
+    rm -rf .git
+    git init
+    cd ..
+    echo "Generated a new Typescript project from https://github.com/marzeq/typescript-template"
+}
