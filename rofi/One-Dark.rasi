@@ -10,34 +10,33 @@
 
 
 * {
-  black:      #000000;
-  red:        #eb6e67;
-  green:      #95ee8f;
-  yellow:     #f8c456;
-  blue:       #6eaafb;
-  mangenta:   #d886f3;
-  cyan:       #6cdcf7;
-  emphasis:   #50536b;
-  text:       #dfdfdf;
-  text-alt:   #b2b2b2;
-  fg:         #abb2bf;
-  bg:         #282c34;
+  black:      #282C34;
+  red:        #E06C75;
+  green:      #98C379;
+  yellow:     #E5C07B;
+  blue:       #61AFEF;
+  mangenta:   #C678DD;
+  cyan:       #56B6C2;
+  emphasis:   #565a61;
+  text:       #ABB2BF;
+  text-alt:   #abb2bf;
+  fg:         #ABB2BF;
+  bg:         #282A36;
 
   spacing: 0;
   background-color: transparent;
 
-  font: "Knack Nerd Font 14";
+  font: "CodeNewRoman Nerd Font 14";
   text-color: @text;
 }
 
 window {
   transparency: "real";
-  fullscreen: true;
   background-color: #282c34dd;
 }
 
 mainbox {
-  padding: 30% 30%;
+  padding: 10px;
 }
 
 inputbar {
@@ -68,7 +67,7 @@ listview {
 element {
   padding: 5px;
   text-color: @text-alt;
-  highlight: bold #95ee8f; /* green */
+  highlight: bold #98C379; /* green */
   border-radius: 3px;
 }
 
