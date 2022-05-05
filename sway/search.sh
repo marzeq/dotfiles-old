@@ -3,5 +3,4 @@ QUERY=$(rofi -dmenu)
 
 if [[ ! -z "$QUERY" ]]; then
   xdg-open "$SEARCHENGINE$QUERY"
-  pamixer --set-volume $VOLUME
 fi

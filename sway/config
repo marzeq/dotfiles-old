@@ -32,7 +32,7 @@ set $menu rofi -modes "window,drun" -show drun
 # Set wallpaper
 output * bg ~/wallpapers/wallpaper.png fill
 
-# Wallpaper switched
+# Wallpaper switcher
 bindsym $mod+Shift+w exec ~/wallpapers/switch.sh
 
 # Set default scaling
