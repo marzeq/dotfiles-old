@@ -16,7 +16,7 @@ set $term alacritty
 set $browser google-chrome-stable
 
 # Communicator
-set $communicator discord
+set $communicator discord --ignore-gpu-blocklist --disable-features=UseOzonePlatform --enable-features=VaapiVideoDecoder --use-gl=desktop --enable-gpu-rasterization --enable-zero-copy
 
 # File manager
 set $filemanager pcmanfm
