@@ -10,8 +10,8 @@ if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
   export GDK_BACKEND="wayland,x11"
   export QT_QPA_PLATFORM=wayland
   export QT_QPA_PLATFORMTHEME=qt5ct
+  if test -f "$HOME/.cargo/env"; then
+    . "$HOME/.cargo/env"
+  fi
   exec sway
 fi
-
-[[ -f ~/.bashrc ]] && . ~/.bashrc
-. "$HOME/.cargo/env"
