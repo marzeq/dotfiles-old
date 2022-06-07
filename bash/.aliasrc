@@ -33,3 +33,5 @@ function newtsproj() {
     cd ..
     echo "Generated a new Typescript project from https://github.com/marzeq/typescript-template"
 }
+
+alias cal="cal -m"

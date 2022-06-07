@@ -25,7 +25,7 @@ mkdir -p $HOME/.bin
 while true
 do
 	echo "You can install:
-	sway/wayland - my sway desktop w/ config, rofi, alacritty, neovim (astrovim), bash dotfiles, xsettingsd, codenewroman font and gtk theme
+	sway/wayland - my sway desktop w/ config, rofi, alacritty, mako, neovim (astronvim), bash dotfiles, xsettingsd, codenewroman font and gtk theme
 	yay - arch only
 	ghcli - automatically runs gh auth login
 	discord
@@ -39,7 +39,7 @@ do
 	if [ $package == "exit" ]; then
 		exit
 	elif [ $package == "sway" ] || [ $package == "wayland" ]; then
-		$INSTALL sway swaylock swayidle waybar light grim slurp pavucontrol rofi xsettingsd xorg-xwayland xdg-desktop-portal xdg-desktop-portal-wlr qt5-wayland qt5ct alacritty neovim unzip wl-clipboard pipewire pipewire-alsa pipewire-jack pipewire-pulse gst-plugin-pipewire libpulse wireplumber
+		$INSTALL sway swaylock swayidle waybar light grim slurp pavucontrol rofi xsettingsd xorg-xwayland xdg-desktop-portal xdg-desktop-portal-wlr qt5-wayland qt5ct alacritty neovim unzip wl-clipboard pipewire pipewire-alsa pipewire-jack pipewire-pulse gst-plugin-pipewire libpulse wireplumber mako
 
 		wget -O CodeNewRoman.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/CodeNewRoman.zip"
 		mkdir ~/.fonts

@@ -38,6 +38,9 @@ bindsym $mod+Shift+w exec ~/wallpapers/switch.sh
 # Set default scaling
 output HDMI-A-1 scale 1.5
 
+# For the lols
+# exec --no-startup-id /usr/local/bin/activate-linux
+
 # Switch scaling
 bindsym $mod+bracketleft exec swaymsg output HDMI-A-1 scale 1.5
 bindsym $mod+bracketright exec swaymsg output HDMI-A-1 scale 1
@@ -146,6 +149,8 @@ input * xkb_layout "pl"
     bindsym $mod+Control+8 exec swaymsg move container to workspace number 8 && swaymsg workspace number 8
     bindsym $mod+Control+9 exec swaymsg move container to workspace number 9 && swaymsg workspace number 9
     bindsym $mod+Control+0 exec swaymsg move container to workspace number 10 && swaymsg workspace number 10
+    
+    bindsym $mod+Shift+f fullscreen
 
 # Layout related
 
@@ -227,7 +232,12 @@ exec --no-startup-id xsettingsd
 
 # XDG Desktop Portals
 
-exec systemctl --user import-enviorment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
-exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec systemctl --user import-enviorment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
+exec --no-startup-id /usr/lib/xdg-desktop-portal -r
+
+# Notifications
+
+# exec --no-startup-id mako
 
 include /etc/sway/config.d/*

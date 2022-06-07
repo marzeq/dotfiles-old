@@ -1,0 +1,7 @@
+font=CodeNewRoman Nerd Font 10
+background-color=#61AFEF7F
+border-color=#282C347F
+text-color=#282C34
+border-radius=24
+anchor=bottom-right
+default-timeout=30000

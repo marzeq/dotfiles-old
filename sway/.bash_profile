@@ -10,8 +10,10 @@ if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
   export GDK_BACKEND="wayland,x11"
   export QT_QPA_PLATFORM=wayland
   export QT_QPA_PLATFORMTHEME=qt5ct
+  export XDG_DATA_DIRS="/var/lib/flatpak/exports/share/applications:$XDG_DATA_DIRS"
   if test -f "$HOME/.cargo/env"; then
     . "$HOME/.cargo/env"
   fi
   exec sway
 fi
+export PATH=$PATH:/home/marzeq/.spicetify
