@@ -238,6 +238,7 @@ exec --no-startup-id /usr/lib/xdg-desktop-portal -r
 
 # Notifications
 
-# exec --no-startup-id mako
+exec --no-startup-id mako
+exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 include /etc/sway/config.d/*

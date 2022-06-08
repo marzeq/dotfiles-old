@@ -39,7 +39,7 @@ do
 	if [ $package == "exit" ]; then
 		exit
 	elif [ $package == "sway" ] || [ $package == "wayland" ]; then
-		$INSTALL sway swaylock swayidle waybar light grim slurp pavucontrol rofi xsettingsd xorg-xwayland xdg-desktop-portal xdg-desktop-portal-wlr qt5-wayland qt5ct alacritty neovim unzip wl-clipboard pipewire pipewire-alsa pipewire-jack pipewire-pulse gst-plugin-pipewire libpulse wireplumber mako
+		$INSTALL sway swaylock swayidle waybar light grim slurp jq polkit polkit-gnome pavucontrol rofi xsettingsd xorg-xwayland xdg-desktop-portal xdg-desktop-portal-wlr qt5-wayland qt5ct alacritty neovim unzip wl-clipboard pipewire pipewire-alsa pipewire-jack pipewire-pulse gst-plugin-pipewire libpulse wireplumber mako
 
 		wget -O CodeNewRoman.zip "https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/CodeNewRoman.zip"
 		mkdir ~/.fonts

@@ -3,7 +3,7 @@
 MODE=$(echo "suspend
 logout
 reboot
-poweroff" | rofi -dmenu)
+poweroff" | rofi -dmenu -p "Power menu")
 
 if [[ ! -z "$MODE" ]]; then
   if [ $MODE == "logout" ]; then

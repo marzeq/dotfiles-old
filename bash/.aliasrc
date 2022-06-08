@@ -34,4 +34,26 @@ function newtsproj() {
     echo "Generated a new Typescript project from https://github.com/marzeq/typescript-template"
 }
 
+function ghcl() {
+    if [ -z $1 ]; then
+        echo "Repo name not supplied"
+        return
+    fi
+
+    path="https://github.com/$1"
+
+    if [[ $1 == https://github.com/* ]]; then
+        path=$1
+    fi
+
+    cd ~/gitclones/
+
+    git clone $path
+
+    cd ${path##*/}
+}
+
 alias cal="cal -m"
+function iexplore.exe() {
+    xdg-open $1 2> /dev/null
+}

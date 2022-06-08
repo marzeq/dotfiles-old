@@ -1,15 +1,14 @@
 {
 	"layer": "top",
-	"modules-left": ["sway/workspaces", "custom/spotify", "sway/mode"],
+	"modules-left": ["sway/workspaces", "sway/mode"],
 	"modules-center": [],
-	"modules-right": ["pulseaudio", "clock", "tray"],
-	"custom/spotify": {
-		"exec": "/usr/bin/python3 ~/.config/waybar/mediaplayer.py --player spotify",
-        "format": "{} ",
-        "return-type": "json",
-        "on-click": "playerctl play-pause",
-        "on-scroll-up": "playerctl next",
-        "on-scroll-down": "playerctl previous"
+	"modules-right": ["custom/updates", "pulseaudio", "clock", "tray"],
+	"custom/updates": {
+		"format": "  {}",
+		"interval": 120,
+		"exec": "yay -Qu | wc -l",
+		"on-click": "alacritty -e yay -Syu && pkill -SIGRTMIN+8 waybar",
+		"signal": 8
 	},
 	"pulseaudio": {
 		"tooltip": false,
