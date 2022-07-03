@@ -5,8 +5,9 @@
 	"modules-right": ["custom/updates", "pulseaudio", "clock", "tray"],
 	"custom/updates": {
 		"format": "  {}",
+		"tooltip": false,
 		"interval": 120,
-		"exec": "yay -Qu | wc -l",
+		"exec": "~/.config/waybar/updates.sh",
 		"on-click": "alacritty -e yay -Syu && pkill -SIGRTMIN+8 waybar",
 		"signal": 8
 	},
