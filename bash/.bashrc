@@ -1,11 +1,6 @@
 #!/bin/bash
 # heavily inspired by ubuntu's default .bashrc
 
-# living that vim life
-set -o vi
-set editing-mode vi
-set keymap vi
-
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -125,3 +120,4 @@ elif type compctl &>/dev/null; then
 fi
 ###-end-npm-completion-###
 export PATH=$PATH:/home/marzeq/.spicetify
+. "$HOME/.cargo/env"

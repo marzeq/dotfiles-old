@@ -67,6 +67,8 @@ do
 		sudo systemctl enable pipewire-pulse
 
 		git clone https://github.com/kabinspace/AstroVim ~/.config/nvim
+		mkdir ~/.config/nvim/lua/user
+		cp $currentdir/astronvim/* ~/.config/nvim/lua/user
 		nvim +PackerSync
 
 		echo "

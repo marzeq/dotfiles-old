@@ -37,8 +37,29 @@ function newtsproj() {
     cd $1
     rm -rf .git
     git init
-    cd ..
-    echo "Generated a new Typescript project from https://github.com/marzeq/typescript-template"
+    echo "Generated a new TypeScript project from https://github.com/marzeq/typescript-template"
+}
+
+function newbotproj() {
+    if [ -z $1 ]; then
+        echo "Directory name not supplied"
+        return
+    fi
+
+    git clone https://github.com/marzeq/discord-bot-template $1
+    cd $1
+    rm -rf .git
+    git init
+    echo "BOT_TOKEN=\"\"
+MONGODB_URL=\"\"
+OWNER_ID=\"\"" > .env
+    echo "Generated a new Discord bot project from https://github.com/marzeq/discord-bot-template"
+    
+    read -n 1 -p "Open Discord dev portal? [Y/n] " reply; 
+    if [ "$reply" != "" ]; then echo; fi
+    if [ "$reply" = "${reply#[Nn]}" ]; then
+        xdg-open https://discord.com/developers/applications
+    fi
 }
 
 function ghcl() {
@@ -60,7 +81,10 @@ function ghcl() {
     cd ${path##*/}
 }
 
+alias astronvimcfg="nvim ~/.config/nvim/lua/user/init.lua"
+
 alias cal="cal -m"
+
 function iexplore.exe() {
     xdg-open $1 2> /dev/null
 }
