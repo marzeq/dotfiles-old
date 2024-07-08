@@ -1,4 +1,6 @@
-# marzeq/dotfiles
+# I don't use these dotfiles anymore, check out [my current dotfiles repo](https://github.com/marzeq/dotfiles)
+
+# marzeq/dotfiles-old
 
 This is a collection of dotfiles for my personal use. It also contains an `install.sh` script that will allow you to install my sway desktop and some other programs I might use.
 
